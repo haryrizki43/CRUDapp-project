@@ -1,0 +1,81 @@
+<!-- edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Edit Item</h1>
+      <form method="post" action="/editItem/<%= item._id %>">
+        <label for="field1">Field 1:</label>
+        <input
+          type="text"
+          id="field1"
+          name="field1"
+          value="<%= item.field1 %>"
+          required
+        />
+
+        <label for="field2">Field 2:</label>
+        <input
+          type="text"
+          id="field2"
+          name="field2"
+          value="<%= item.field2 %>"
+          required
+        />
+
+        <label for="field3">Field 3:</label>
+        <input
+          type="text"
+          id="field3"
+          name="field3"
+          value="<%= item.field3 %>"
+          required
+        />
+
+        <label for="field4">Field 4:</label>
+        <input
+          type="text"
+          id="field4"
+          name="field4"
+          value="<%= item.field4 %>"
+          required
+        />
+
+        <label for="field5">Field 5:</label>
+        <input
+          type="text"
+          id="field5"
+          name="field5"
+          value="<%= item.field5 %>"
+          required
+        />
+
+        <label for="field6">Field 6:</label>
+        <input
+          type="text"
+          id="field6"
+          name="field6"
+          value="<%= item.field6 %>"
+          required
+        />
+
+        <label for="field7">Field 7:</label>
+        <input
+          type="text"
+          id="field7"
+          name="field7"
+          value="<%= item.field7 %>"
+          required
+        />
+
+        <button type="submit">Simpan perubahan</button>
+      </form>
+    </main>
+  </body>
+</html>

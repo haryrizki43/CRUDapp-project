@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>CRUD App</h1>
+    <ul>
+      <% items.forEach(item => { %>
+      <li>
+        <%= item.field1 %> | <%= item.field2 %> | <%= item.field3 %> | <%=
+        item.field4 %> | <%= item.field5 %> | <%= item.field6 %> | <%=
+        item.field7 %> |
+        <form method="post" action="/deleteItem">
+          <input type="hidden" name="itemId" value="<%= item._id %>" />
+          <button type="submit">Delete</button>
+        </form>
+        <a href="/editItem/<%= item._id %>">Edit</a>
+      </li>
+      <% }); %>
+    </ul>
+    <h2>Tambah Item Baru</h2>
+    <form method="post" action="/addItem">
+      <label for="field1">Field 1:</label>
+      <input type="text" name="field1" required /><br />
+      <label for="field2">Field 2:</label>
+      <input type="text" name="field2" required /><br />
+      <label for="field3">Field 3:</label>
+      <input type="text" name="field3" required /><br />
+      <label for="field4">Field 4:</label>
+      <input type="text" name="field4" required /><br />
+      <label for="field5">Field 5:</label>
+      <input type="text" name="field5" required /><br />
+      <label for="field6">Field 6:</label>
+      <input type="text" name="field6" required /><br />
+      <label for="field7">Field 7:</label>
+      <input type="text" name="field7" required /><br />
+      <button type="submit">Tambahkan Item</button>
+    </form>
+  </body>
+</html>
